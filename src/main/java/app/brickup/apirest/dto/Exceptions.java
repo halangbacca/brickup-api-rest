@@ -5,11 +5,11 @@ import org.springframework.validation.FieldError;
 
 @Getter
 public class Exceptions {
-    String campo;
-    String mensage;
+    String field;
+    String message;
 
     public Exceptions(FieldError fieldError) {
-        this.campo = fieldError.getField();
-        this.mensage = fieldError.getDefaultMessage();
+        this.field = fieldError.getField();
+        this.message = fieldError.getDefaultMessage();
     }
 }

@@ -7,11 +7,11 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class TarefaDTO {
+public class TaskDTO {
     private Long id;
-    @NotBlank(message = "A descrição é obrigatória!")
-    private String descricao;
+    @NotBlank(message = "The description is required!")
+    private String description;
     private Status status;
-    private String imagem;
-    private Boolean finalizado;
+    private String image;
+    private Boolean isCompleted;
 }

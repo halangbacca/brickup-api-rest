@@ -13,13 +13,13 @@ import java.util.List;
 @RestControllerAdvice
 public class Handler {
     @ExceptionHandler(MethodArgumentNotValidException.class)
-    public ResponseEntity<List<Exceptions>> trataErroMethodArgument(MethodArgumentNotValidException exception) {
-        List<FieldError> erros = exception.getFieldErrors();
-        return ResponseEntity.badRequest().body(erros.stream().map(Exceptions::new).toList());
+    public ResponseEntity<List<Exceptions>> methodArgumentHandler(MethodArgumentNotValidException exception) {
+        List<FieldError> errors = exception.getFieldErrors();
+        return ResponseEntity.badRequest().body(errors.stream().map(Exceptions::new).toList());
     }
 
     @ExceptionHandler(EntityNotFoundException.class)
-    public ResponseEntity<String> trataEntityNotFound() {
-        return ResponseEntity.status(404).body("Tarefa não encontrada!");
+    public ResponseEntity<String> entityNotFoundHandler() {
+        return ResponseEntity.status(404).body("Task not found!");
     }
 }

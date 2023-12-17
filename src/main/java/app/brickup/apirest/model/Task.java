@@ -6,17 +6,18 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "tarefas")
+@Table(name = "tasks")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Tarefa {
+public class Task {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String descricao;
+    private String description;
     @Enumerated(EnumType.STRING)
     private Status status;
-    private String imagem;
-    private Boolean finalizado;
+    private String image;
+    @Column(name = "is_completed")
+    private Boolean isCompleted;
 }
