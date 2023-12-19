@@ -8,6 +8,7 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
+import java.io.FileNotFoundException;
 import java.util.List;
 
 @RestControllerAdvice
@@ -21,5 +22,15 @@ public class Handler {
     @ExceptionHandler(EntityNotFoundException.class)
     public ResponseEntity<String> entityNotFoundHandler() {
         return ResponseEntity.status(404).body("Task not found!");
+    }
+
+    @ExceptionHandler(FileNotFoundException.class)
+    public ResponseEntity<String> fileNotFoundHandler() {
+        return ResponseEntity.status(404).body("File not found!");
+    }
+
+    @ExceptionHandler(IllegalArgumentException.class)
+    public ResponseEntity<String> illegalArgumentHandler() {
+        return ResponseEntity.status(404).body("File not found!");
     }
 }

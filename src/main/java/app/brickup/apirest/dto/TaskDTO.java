@@ -12,6 +12,5 @@ public class TaskDTO {
     @NotBlank(message = "The description is required!")
     private String description;
     private Status status;
-    private String image;
-    private Boolean isCompleted;
+    private String linkImage;
 }

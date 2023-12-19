@@ -17,7 +17,7 @@ public class Task {
     private String description;
     @Enumerated(EnumType.STRING)
     private Status status;
-    private String image;
-    @Column(name = "is_completed")
-    private Boolean isCompleted;
+    @Column(name = "link_image")
+    private String linkImage;
+
 }

@@ -39,12 +39,12 @@ Todo script para criação do banco de dados se encontra na pasta **resources/db
 
 Requisições para a API devem seguir os padrões:
 
-| Método   | Descrição |
-|----------|---|
-| `GET`    | Retorna informações de um ou mais registros. |
-| `POST`   | Utilizado para criar um novo registro. |
+| Método   | Descrição                                             |
+|----------|-------------------------------------------------------|
+| `GET`    | Retorna informações de um ou mais registros.          |
+| `POST`   | Utilizado para criar um novo registro.                |
 | `PATCH`  | Atualiza dados de um registro ou altera sua situação. |
-| `DELETE` | Remove um registro do sistema. |
+| `DELETE` | Remove um registro do sistema.                        |
 
 ## **Respostas**
 
@@ -58,10 +58,11 @@ Requisições para a API devem seguir os padrões:
 
 # **Recursos da API**
 
-| Método   | Endpoint        |
-|----------|-----------------|
-| `GET`    | /api/tasks      |
-| `GET`    | /api/tasks/{id} |
-| `POST`   | /api/tasks      |
-| `PATCH`  | /api/tasks/{id} |
-| `DELETE` | /api/tasks/{id} |
+| Método   | Endpoint              |
+|----------|-----------------------|
+| `GET`    | /api/tasks            |
+| `GET`    | /api/tasks/{id}       |
+| `GET`    | /api/tasks/{id}/image |
+| `POST`   | /api/tasks            |
+| `PATCH`  | /api/tasks/{id}       |
+| `DELETE` | /api/tasks/{id}       |
