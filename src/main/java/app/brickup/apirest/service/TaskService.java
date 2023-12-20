@@ -74,7 +74,7 @@ public class TaskService {
         Task updatedTask = modelMapper.map(dto, Task.class);
         updatedTask.setId(id);
 
-        if (dto.getLinkImage() != null) {
+        if (image != null) {
             try {
                 if (UploadImageUtil.uploadImage(image)) {
                     System.out.println(UploadImageUtil.imagePath);
